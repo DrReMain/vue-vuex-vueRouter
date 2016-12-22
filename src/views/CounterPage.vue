@@ -9,7 +9,7 @@
 
 <script>
     import Counter from '../components/Counter.vue'
-    import {mapGetters, mapActions} from 'vuex'     // use to get data from store
+    import {mapState, mapGetters, mapActions} from 'vuex'     // use to get data from store
 
     export default {
         components: {
@@ -17,6 +17,9 @@
         },
 
         computed: {
+//            ...mapState([
+//                'count'
+//            ]),
             ...mapGetters([
                 'count'
             ])
@@ -27,8 +30,6 @@
                 'incrementCount',
                 'decrementCount'
             ])
-
-
 
 //            两种方法 dispatch actions
 //            incrementCount() {
