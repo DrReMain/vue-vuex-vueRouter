@@ -7,6 +7,8 @@
         <h1>THIS IS HOME</h1>
         <div class="container">
             <router-link to="/counter">Go to counter</router-link>
+            <br>
+            <router-link to="/components">Go to components</router-link>
         </div>
     </div>
 </template>
