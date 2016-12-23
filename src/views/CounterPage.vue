@@ -1,9 +1,14 @@
 <template>
     <div class="container">
+        <p style="text-align: center"><button @click="fetchApi({url: 'http://cdn.bootcss.com/normalize/5.0.0/normalize.css'})">fetch</button></p>
+        <div>
+            {{pageData}}
+        </div>
         <Counter :count="count"
                  :increment-count="incrementCount"
                  :decrement-count="decrementCount"
         ></Counter>
+
     </div>
 </template>
 
@@ -21,14 +26,16 @@
 //                'count'
 //            ]),
             ...mapGetters([
-                'count'
+                'count',
+                'pageData'
             ])
         },
 
         methods: {
             ...mapActions([
                 'incrementCount',
-                'decrementCount'
+                'decrementCount',
+                'fetchApi'
             ])
 
 //            两种方法 dispatch actions

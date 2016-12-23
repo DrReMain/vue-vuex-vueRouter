@@ -10,7 +10,7 @@ Vue.use(Vuex)
 
 const state = {
     count: 0,
-    pageDate: {}
+    pageData: {}
 }
 
 export default new Vuex.Store({
@@ -18,7 +18,7 @@ export default new Vuex.Store({
     actions,
     getters,
     mutations,
-    plugins: process.env.NODE_ENV !== 'production'
-        ? [createLogger()]
-        : []
+    // plugins: process.env.NODE_ENV !== 'production'
+    //     ? [createLogger()]
+    //     : []
 })

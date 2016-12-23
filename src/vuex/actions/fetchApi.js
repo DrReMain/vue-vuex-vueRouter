@@ -2,7 +2,7 @@ import querystring from 'querystring';
 
 function fetchApi({
     url,
-    method = 'POST',
+    method = 'GET',
     params,
     json = false,
     customHeaders = {}
@@ -33,13 +33,14 @@ function fetchApi({
         if (response.status >= 400) {
             throw new Error("Bad response from server");
         }
-        return response.json();
+        // 数据为json， 则改为 return response.json()
+        return response.text();
     })
         .then((data) => {
-            console.log(data);
+            // console.log(data);
             return Promise.resolve(data);
         }).catch((err) => {
-            console.log(err);
+            // console.log(err);
             return Promise.reject(err);
         });
 }
