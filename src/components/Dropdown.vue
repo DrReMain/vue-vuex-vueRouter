@@ -36,6 +36,7 @@
     .dropdown {
         display: inline-block;
         background: #fff;
+        position: relative;
     }
 
     .dropdown-btn {
@@ -44,6 +45,9 @@
         cursor: pointer;
     }
     .dropdown-menu {
+        box-sizing: border-box;
+        position: absolute;
+        width: 100%;
         border: 1px solid #ccc;
         background: lightcyan;
     }

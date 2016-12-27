@@ -10,6 +10,7 @@ Vue.use(Vuex)
 
 const state = {
     count: 0,
+    modalToggle: false,
     pageData: {}
 }
 
