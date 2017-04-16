@@ -1,3 +1,6 @@
+# 现在Vue-Cli默认支持vueRouter了，不推荐使用这套环境
+# 有时间在官方Cli基础上改写下加入vuex和fetchApi
+
 # vxr
 
 > A Vue.js project
